@@ -18,11 +18,11 @@ public class Dev4jApplication {
 	
 	private static final Logger log = LoggerFactory.getLogger(Dev4jApplication.class);
 
-	
+	/*
 	@Bean
 	public String getApplicationName() {
 		return ":Devs4j rules";
-	}
+	}*/
 	/*
 	@Bean(initMethod = "init", destroyMethod = "destroy")
 	public ExplicitBean getBean() {
@@ -31,7 +31,7 @@ public class Dev4jApplication {
 	*/
 	public static void main(String[] args) {
 		ConfigurableApplicationContext context = SpringApplication.run(Dev4jApplication.class, args);
-		LifeCycleBean bean = context.getBean(LifeCycleBean.class);
+		//LifeCycleBean bean = context.getBean(LifeCycleBean.class);
 	}
 
 }

@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 
+import com.devs4j.di.aop.TargetObject;
 import com.devs4j.di.lifeCycle.ExplicitBean;
 import com.devs4j.di.lifeCycle.LifeCycleBean;
 
@@ -32,6 +33,9 @@ public class Dev4jApplication {
 	public static void main(String[] args) {
 		ConfigurableApplicationContext context = SpringApplication.run(Dev4jApplication.class, args);
 		//LifeCycleBean bean = context.getBean(LifeCycleBean.class);
+		TargetObject object = context.getBean(TargetObject.class);
+		object.hello("Hello world");
+		object.foo();
 	}
 
 }
